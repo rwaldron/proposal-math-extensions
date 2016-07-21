@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./spec.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="./spec.js"></script>
+<pre class="metadata">
+title: Math Extensions
+stage: -1
+location: https://github.com/rwaldron/proposal-math-extensions
+copyright: false
+contributors: Rick Waldron
+</pre>
+
+
+<emu-clause id="sec-well-known-intrinsic-objects">
+  <h1>Well-Known Intrinsic Objects</h1>
+  <p>Additions</p>
+
+  <emu-table id="table-1" caption="Well-known Intrinsic Objects">
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            Intrinsic Name
+          </th>
+          <th>
+            Global Name
+          </th>
+          <th>
+            ECMAScript Language Association
+          </th>
+        </tr>
+        <tr>
+          <td>
+            %Math_max%
+          </td>
+          <td>
+            `Math.max`
+          </td>
+          <td>
+            The `Math.max` function (<emu-xref href="#sec-math.max"></emu-xref>)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            %Math_min%
+          </td>
+          <td>
+            `Math.min`
+          </td>
+          <td>
+            The `Math.min` function (<emu-xref href="#sec-math.min"></emu-xref>)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </emu-table>
+</emu-clause>
+
+<emu-clause id="sec-math.constrain">
+  <h1>Math.constrain ( _x_, _lower_, _upper_ )</h1>
+
+  <p> When the `constrain` function is called, the following steps are taken:</p>
+
+  <emu-alg>
+    1. If no arguments are passed, return *NaN*;
+    1. If _x_ is *NaN*, return *NaN*.
+    1. If _lower_ is *NaN*, return *NaN*.
+    1. If _upper_ is *NaN*, return *NaN*.
+    1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
+    1. Let _max_ be %Math_max%(_x_, _lower_).
+    1. Let _min_ be %Math_min%(_max_, _upper_).
+    1. Return _min_.
+  </emu-alg>
+</emu-clause>
+
+
+<emu-clause id="sec-math.map">
+  <h1>Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )</h1>
+
+  <p>When the `map` function is called, the following steps are taken:</p>
+
+  <emu-alg>
+    1. If no arguments are passed, return *NaN*;
+    1. If _x_ is *NaN*, return *NaN*.
+    1. If _inLow_ is *NaN*, return *NaN*.
+    1. If _inHigh_ is *NaN*, return *NaN*.
+    1. If _outLow_ is *NaN*, return *NaN*.
+    1. If _outHigh_ is *NaN*, return *NaN*.
+    1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
+    1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
+    1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
+    1. Let _quotient_ be (_dividend_ &divide; _divisor_).
+    1. Return _quotient_.
+  </emu-alg>
+
+</emu-clause>
+
+<emu-clause id="sec-math.fmap">
+  <h1>Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )</h1>
+
+  <p> When the `fmap` function is called, the following steps are taken:</p>
+
+  <emu-alg>
+    1. If no arguments are passed, return *NaN*;
+    1. If _x_ is *NaN*, return *NaN*.
+    1. If _inLow_ is *NaN*, return *NaN*.
+    1. If _inHigh_ is *NaN*, return *NaN*.
+    1. If _outLow_ is *NaN*, return *NaN*.
+    1. If _outHigh_ is *NaN*, return *NaN*.
+    1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
+    1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
+    1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
+    1. Let _quotient_ be (_dividend_ &divide; _divisor_).
+    1. Let _x32_ be the result of converting _quotient_ to a value in IEEE 754-2008 binary32 format using roundTiesToEven.
+    1. Let _x64_ be the result of converting _x32_ to a value in IEEE 754-2008 binary64 format.
+    1. Return the ECMAScript Number value corresponding to _x64_.
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-math.radians">
+
+  <h1>Math.radians ( _degrees_ )</h1>
+
+  <p> When the `radians` function is called, the following steps are taken:</p>
+
+  <emu-alg>
+    1. If no arguments are passed, return *NaN*;
+    1. If _degrees_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
+    1. Let _radians_ be (_degrees_ &times; (&pi; &divide; 180)).
+    1. Return _radians_.
+  </emu-alg>
+</emu-clause>
+
+
+<emu-clause id="sec-math.degrees">
+
+  <h1>Math.degrees ( _radians_ )</h1>
+
+  <p> When the `degrees` function is called, the following steps are taken:</p>
+
+  <emu-alg>
+    1. If no arguments are passed, return *NaN*;
+    1. If _radians_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
+    1. Let _degrees_ be (_radians_ &times; (180 &divide; &pi;)).
+    1. Return _degrees_.
+  </emu-alg>
+</emu-clause>
+
+
+<emu-clause id="sec-number.rad_to_deg">
+  <h1>Number.RAD_TO_DEG</h1>
+  <p>The value of Number.RAD_TO_DEG is (180 &divide; &pi;), which is approximately 57.29577951308232.</p>
+  <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
+</emu-clause>
+
+<emu-clause id="sec-number.deg_to_rad">
+  <h1>Number.DEG_TO_RAD</h1>
+  <p>The value of Number.DEG_TO_RAD is (&pi; &divide; 180), which is approximately 0.017453292519943295.</p>
+  <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
+</emu-clause>
