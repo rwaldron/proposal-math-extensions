@@ -63,10 +63,7 @@ contributors: Rick Waldron
   <p> When the `constrain` function is called, the following steps are taken:</p>
 
   <emu-alg>
-    1. If no arguments are passed, return *NaN*;
-    1. If _x_ is *NaN*, return *NaN*.
-    1. If _lower_ is *NaN*, return *NaN*.
-    1. If _upper_ is *NaN*, return *NaN*.
+    1. If any argument is *NaN*, return *NaN*.
     1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
     1. Let _max_ be %Math_max%(_x_, _lower_).
     1. Let _min_ be %Math_min%(_max_, _upper_).
@@ -81,12 +78,7 @@ contributors: Rick Waldron
   <p>When the `map` function is called, the following steps are taken:</p>
 
   <emu-alg>
-    1. If no arguments are passed, return *NaN*;
-    1. If _x_ is *NaN*, return *NaN*.
-    1. If _inLow_ is *NaN*, return *NaN*.
-    1. If _inHigh_ is *NaN*, return *NaN*.
-    1. If _outLow_ is *NaN*, return *NaN*.
-    1. If _outHigh_ is *NaN*, return *NaN*.
+    1. If any argument is *NaN*, return *NaN*.
     1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
     1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
     1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
@@ -102,12 +94,7 @@ contributors: Rick Waldron
   <p> When the `fmap` function is called, the following steps are taken:</p>
 
   <emu-alg>
-    1. If no arguments are passed, return *NaN*;
-    1. If _x_ is *NaN*, return *NaN*.
-    1. If _inLow_ is *NaN*, return *NaN*.
-    1. If _inHigh_ is *NaN*, return *NaN*.
-    1. If _outLow_ is *NaN*, return *NaN*.
-    1. If _outHigh_ is *NaN*, return *NaN*.
+    1. If any argument is *NaN*, return *NaN*.
     1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
     1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
     1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
@@ -125,9 +112,8 @@ contributors: Rick Waldron
   <p> When the `radians` function is called, the following steps are taken:</p>
 
   <emu-alg>
-    1. If no arguments are passed, return *NaN*;
     1. If _degrees_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
-    1. Let _radians_ be (_degrees_ &times; (&pi; &divide; 180)).
+    1. Let _radians_ be (_degrees_ &times; `Math.RAD_TO_DEG`).
     1. Return _radians_.
   </emu-alg>
 </emu-clause>
@@ -140,22 +126,21 @@ contributors: Rick Waldron
   <p> When the `degrees` function is called, the following steps are taken:</p>
 
   <emu-alg>
-    1. If no arguments are passed, return *NaN*;
     1. If _radians_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
-    1. Let _degrees_ be (_radians_ &times; (180 &divide; &pi;)).
+    1. Let _degrees_ be (_radians_ &times; `Math.DEG_TO_RAD`).
     1. Return _degrees_.
   </emu-alg>
 </emu-clause>
 
 
-<emu-clause id="sec-number.rad_to_deg">
-  <h1>Number.RAD_TO_DEG</h1>
-  <p>The value of Number.RAD_TO_DEG is (180 &divide; &pi;), which is approximately 57.29577951308232.</p>
+<emu-clause id="sec-math.rad_to_deg">
+  <h1>Math.RAD_TO_DEG</h1>
+  <p>The value of `Math.RAD_TO_DEG` is (180 &divide; &pi;), which is approximately 57.29577951308232.</p>
   <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
 </emu-clause>
 
-<emu-clause id="sec-number.deg_to_rad">
-  <h1>Number.DEG_TO_RAD</h1>
-  <p>The value of Number.DEG_TO_RAD is (&pi; &divide; 180), which is approximately 0.017453292519943295.</p>
+<emu-clause id="sec-math.deg_to_rad">
+  <h1>Math.DEG_TO_RAD</h1>
+  <p>The value of `Math.DEG_TO_RAD` is (&pi; &divide; 180), which is approximately 0.017453292519943295.</p>
   <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
 </emu-clause>
