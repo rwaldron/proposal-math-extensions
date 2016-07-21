@@ -63,22 +63,22 @@
 			"key": "Math.degrees ( _radians_ )"
 		}, {
 			"type": "clause",
-			"id": "sec-number.rad_to_deg",
+			"id": "sec-math.rad_to_deg",
 			"aoid": null,
-			"title": "Number.RAD_TO_DEG",
+			"title": "Math.RAD_TO_DEG",
 			"number": "7",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Number.RAD_TO_DEG"
+			"key": "Math.RAD_TO_DEG"
 		}, {
 			"type": "clause",
-			"id": "sec-number.deg_to_rad",
+			"id": "sec-math.deg_to_rad",
 			"aoid": null,
-			"title": "Number.DEG_TO_RAD",
+			"title": "Math.DEG_TO_RAD",
 			"number": "8",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Number.DEG_TO_RAD"
+			"key": "Math.DEG_TO_RAD"
 		}, {
 			"type": "table",
 			"id": "table-1",
@@ -105,8 +105,8 @@
 				<li><span class="item-toggle-none"></span><a href="#sec-math.fmap" title="Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">4</span> Math.fmap ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">5</span> Math.radians ( <var>degrees</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">6</span> Math.degrees ( <var>radians</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-number.rad_to_deg" title="Number.RAD_TO_DEG"><span class="secnum">7</span> Number.RAD_TO_DEG</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-number.deg_to_rad" title="Number.DEG_TO_RAD"><span class="secnum">8</span> Number.DEG_TO_RAD</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.rad_to_deg" title="Math.RAD_TO_DEG"><span class="secnum">7</span> Math.RAD_TO_DEG</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.deg_to_rad" title="Math.DEG_TO_RAD"><span class="secnum">8</span> Math.DEG_TO_RAD</a></li>
 			</ol>
 		</div>
 	</div>
@@ -180,15 +180,7 @@
 
 		<emu-alg>
 			<ol>
-				<li>If no arguments are passed, return
-					<emu-val>NaN</emu-val>;</li>
-				<li>If <var>x</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>lower</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>upper</var> is
+				<li>If any argument is
 					<emu-val>NaN</emu-val>, return
 					<emu-val>NaN</emu-val>.</li>
 				<li>If <var>x</var> is one of
@@ -210,21 +202,7 @@
 
 		<emu-alg>
 			<ol>
-				<li>If no arguments are passed, return
-					<emu-val>NaN</emu-val>;</li>
-				<li>If <var>x</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>inLow</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>inHigh</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>outLow</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>outHigh</var> is
+				<li>If any argument is
 					<emu-val>NaN</emu-val>, return
 					<emu-val>NaN</emu-val>.</li>
 				<li>If <var>x</var> is one of
@@ -247,21 +225,7 @@
 
 		<emu-alg>
 			<ol>
-				<li>If no arguments are passed, return
-					<emu-val>NaN</emu-val>;</li>
-				<li>If <var>x</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>inLow</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>inHigh</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>outLow</var> is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>outHigh</var> is
+				<li>If any argument is
 					<emu-val>NaN</emu-val>, return
 					<emu-val>NaN</emu-val>.</li>
 				<li>If <var>x</var> is one of
@@ -286,13 +250,11 @@
 
 		<emu-alg>
 			<ol>
-				<li>If no arguments are passed, return
-					<emu-val>NaN</emu-val>;</li>
 				<li>If <var>degrees</var> is one of
 					<emu-val>NaN</emu-val>,
 					<emu-val>+∞</emu-val>,
 					<emu-val>-∞</emu-val>, return <var>degrees</var>.</li>
-				<li>Let <var>radians</var> be (<var>degrees</var> × (π ÷ 180)).</li>
+				<li>Let <var>radians</var> be (<var>degrees</var> × <code>Math.RAD_TO_DEG</code>).</li>
 				<li>Return <var>radians</var>.
 				</li>
 			</ol>
@@ -308,13 +270,11 @@
 
 		<emu-alg>
 			<ol>
-				<li>If no arguments are passed, return
-					<emu-val>NaN</emu-val>;</li>
 				<li>If <var>radians</var> is one of
 					<emu-val>NaN</emu-val>,
 					<emu-val>+∞</emu-val>,
 					<emu-val>-∞</emu-val>, return <var>degrees</var>.</li>
-				<li>Let <var>degrees</var> be (<var>radians</var> × (180 ÷ π)).</li>
+				<li>Let <var>degrees</var> be (<var>radians</var> × <code>Math.DEG_TO_RAD</code>).</li>
 				<li>Return <var>degrees</var>.
 				</li>
 			</ol>
@@ -322,18 +282,18 @@
 	</emu-clause>
 
 
-	<emu-clause id="sec-number.rad_to_deg">
-		<h1><span class="secnum">7</span>Number.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-number.rad_to_deg">#</a></span></span></h1>
-		<p>The value of Number.RAD_TO_DEG is (180 ÷ π), which is approximately 57.29577951308232.</p>
+	<emu-clause id="sec-math.rad_to_deg">
+		<h1><span class="secnum">7</span>Math.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
+		<p>The value of <code>Math.RAD_TO_DEG</code> is (180 ÷ π), which is approximately 57.29577951308232.</p>
 		<p>This property has the attributes { [[Writable]]:
 			<emu-val>false</emu-val>, [[Enumerable]]:
 			<emu-val>false</emu-val>, [[Configurable]]:
 			<emu-val>false</emu-val> }.</p>
 	</emu-clause>
 
-	<emu-clause id="sec-number.deg_to_rad">
-		<h1><span class="secnum">8</span>Number.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-number.deg_to_rad">#</a></span></span></h1>
-		<p>The value of Number.DEG_TO_RAD is (π ÷ 180), which is approximately 0.017453292519943295.</p>
+	<emu-clause id="sec-math.deg_to_rad">
+		<h1><span class="secnum">8</span>Math.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
+		<p>The value of <code>Math.DEG_TO_RAD</code> is (π ÷ 180), which is approximately 0.017453292519943295.</p>
 		<p>This property has the attributes { [[Writable]]:
 			<emu-val>false</emu-val>, [[Enumerable]]:
 			<emu-val>false</emu-val>, [[Configurable]]:
