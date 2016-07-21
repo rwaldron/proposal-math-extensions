@@ -1,0 +1,342 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./spec.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<script src="./spec.js"></script>
+	<title>Math Extensions</title>
+	<script type="application/json" id="menu-search-biblio">
+		[{
+			"type": "clause",
+			"id": "sec-well-known-intrinsic-objects",
+			"aoid": null,
+			"title": "Well-Known Intrinsic Objects",
+			"number": "1",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Well-Known Intrinsic Objects"
+		}, {
+			"type": "clause",
+			"id": "sec-math.constrain",
+			"aoid": null,
+			"title": "Math.constrain ( _x_, _lower_, _upper_ )",
+			"number": "2",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Math.constrain ( _x_, _lower_, _upper_ )"
+		}, {
+			"type": "clause",
+			"id": "sec-math.map",
+			"aoid": null,
+			"title": "Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )",
+			"number": "3",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"
+		}, {
+			"type": "clause",
+			"id": "sec-math.fmap",
+			"aoid": null,
+			"title": "Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )",
+			"number": "4",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"
+		}, {
+			"type": "clause",
+			"id": "sec-math.radians",
+			"aoid": null,
+			"title": "Math.radians ( _degrees_ )",
+			"number": "5",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Math.radians ( _degrees_ )"
+		}, {
+			"type": "clause",
+			"id": "sec-math.degrees",
+			"aoid": null,
+			"title": "Math.degrees ( _radians_ )",
+			"number": "6",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Math.degrees ( _radians_ )"
+		}, {
+			"type": "clause",
+			"id": "sec-number.rad_to_deg",
+			"aoid": null,
+			"title": "Number.RAD_TO_DEG",
+			"number": "7",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Number.RAD_TO_DEG"
+		}, {
+			"type": "clause",
+			"id": "sec-number.deg_to_rad",
+			"aoid": null,
+			"title": "Number.DEG_TO_RAD",
+			"number": "8",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Number.DEG_TO_RAD"
+		}, {
+			"type": "table",
+			"id": "table-1",
+			"number": 1,
+			"caption": "Table 1: Well-known Intrinsic Objects",
+			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
+			"location": "",
+			"key": "Table 1: Well-known Intrinsic Objects"
+		}]
+	</script>
+</head>
+
+<body>
+	<div id="menu-toggle">☰</div>
+	<div id="menu">
+		<div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search...">
+			<div id="menu-search-results" class="inactive"></div>
+		</div>
+		<div id="menu-toc">
+			<ol class="toc">
+				<li><span class="item-toggle-none"></span><a href="#sec-well-known-intrinsic-objects" title="Well-Known Intrinsic Objects"><span class="secnum">1</span> Well-Known Intrinsic Objects</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.constrain" title="Math.constrain ( _x_, _lower_, _upper_ )"><span class="secnum">2</span> Math.constrain ( <var>x</var>, <var>lower</var>, <var>upper</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.map" title="Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">3</span> Math.map ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.fmap" title="Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">4</span> Math.fmap ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">5</span> Math.radians ( <var>degrees</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">6</span> Math.degrees ( <var>radians</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-number.rad_to_deg" title="Number.RAD_TO_DEG"><span class="secnum">7</span> Number.RAD_TO_DEG</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-number.deg_to_rad" title="Number.DEG_TO_RAD"><span class="secnum">8</span> Number.DEG_TO_RAD</a></li>
+			</ol>
+		</div>
+	</div>
+	<h1 class="version">Stage -1 Draft / July 21, 2016</h1>
+	<h1 class="title">Math Extensions</h1>
+
+
+	<emu-clause id="sec-well-known-intrinsic-objects">
+		<h1><span class="secnum">1</span>Well-Known Intrinsic Objects<span class="utils"><span class="anchor"><a href="#sec-well-known-intrinsic-objects">#</a></span></span></h1>
+		<p>Additions</p>
+
+		<emu-table id="table-1" caption="Well-known Intrinsic Objects">
+			<figure>
+				<figcaption>Table 1: Well-known Intrinsic Objects</figcaption>
+				<table>
+					<tbody>
+						<tr>
+							<th>
+								Intrinsic Name
+
+							</th>
+							<th>
+								Global Name
+
+							</th>
+							<th>
+								ECMAScript Language Association
+
+							</th>
+						</tr>
+						<tr>
+							<td>
+								%Math_max%
+
+							</td>
+							<td>
+								<code>Math.max</code>
+
+							</td>
+							<td>
+								The <code>Math.max</code> function (
+								<emu-xref href="#sec-math.max"><a href="https://tc39.github.io/ecma262/#sec-math.max">20.2.2.24</a></emu-xref>)
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								%Math_min%
+
+							</td>
+							<td>
+								<code>Math.min</code>
+
+							</td>
+							<td>
+								The <code>Math.min</code> function (
+								<emu-xref href="#sec-math.min"><a href="https://tc39.github.io/ecma262/#sec-math.min">20.2.2.25</a></emu-xref>)
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</figure>
+		</emu-table>
+	</emu-clause>
+
+	<emu-clause id="sec-math.constrain">
+		<h1><span class="secnum">2</span>Math.constrain ( <var>x</var>, <var>lower</var>, <var>upper</var> )<span class="utils"><span class="anchor"><a href="#sec-math.constrain">#</a></span></span></h1>
+
+		<p> When the <code>constrain</code> function is called, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>If no arguments are passed, return
+					<emu-val>NaN</emu-val>;</li>
+				<li>If <var>x</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>lower</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>upper</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>x</var> is one of
+					<emu-val>+∞</emu-val>,
+					<emu-val>-∞</emu-val>, return <var>x</var>.</li>
+				<li>Let <var>max</var> be %Math_max%(<var>x</var>, <var>lower</var>).</li>
+				<li>Let <var>min</var> be %Math_min%(<var>max</var>, <var>upper</var>).</li>
+				<li>Return <var>min</var>.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+
+	<emu-clause id="sec-math.map">
+		<h1><span class="secnum">3</span>Math.map ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )<span class="utils"><span class="anchor"><a href="#sec-math.map">#</a></span></span></h1>
+
+		<p>When the <code>map</code> function is called, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>If no arguments are passed, return
+					<emu-val>NaN</emu-val>;</li>
+				<li>If <var>x</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>inLow</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>inHigh</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>outLow</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>outHigh</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>x</var> is one of
+					<emu-val>+∞</emu-val>,
+					<emu-val>-∞</emu-val>, return <var>x</var>.</li>
+				<li>Let <var>dividend</var> be ((<var>x</var> − <var>inLow</var>) × (<var>outHigh</var> − <var>outLow</var>)).</li>
+				<li>Let <var>divisor</var> be ((<var>inHigh</var> − <var>inLow</var>) + <var>outLow</var>).</li>
+				<li>Let <var>quotient</var> be (<var>dividend</var> ÷ <var>divisor</var>).</li>
+				<li>Return <var>quotient</var>.
+				</li>
+			</ol>
+		</emu-alg>
+
+	</emu-clause>
+
+	<emu-clause id="sec-math.fmap">
+		<h1><span class="secnum">4</span>Math.fmap ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )<span class="utils"><span class="anchor"><a href="#sec-math.fmap">#</a></span></span></h1>
+
+		<p> When the <code>fmap</code> function is called, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>If no arguments are passed, return
+					<emu-val>NaN</emu-val>;</li>
+				<li>If <var>x</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>inLow</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>inHigh</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>outLow</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>outHigh</var> is
+					<emu-val>NaN</emu-val>, return
+					<emu-val>NaN</emu-val>.</li>
+				<li>If <var>x</var> is one of
+					<emu-val>+∞</emu-val>,
+					<emu-val>-∞</emu-val>, return <var>x</var>.</li>
+				<li>Let <var>dividend</var> be ((<var>x</var> − <var>inLow</var>) × (<var>outHigh</var> − <var>outLow</var>)).</li>
+				<li>Let <var>divisor</var> be ((<var>inHigh</var> − <var>inLow</var>) + <var>outLow</var>).</li>
+				<li>Let <var>quotient</var> be (<var>dividend</var> ÷ <var>divisor</var>).</li>
+				<li>Let <var>x32</var> be the result of converting <var>quotient</var> to a value in IEEE 754-2008 binary32 format using roundTiesToEven.</li>
+				<li>Let <var>x64</var> be the result of converting <var>x32</var> to a value in IEEE 754-2008 binary64 format.</li>
+				<li>Return the ECMAScript Number value corresponding to <var>x64</var>.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-math.radians">
+
+		<h1><span class="secnum">5</span>Math.radians ( <var>degrees</var> )<span class="utils"><span class="anchor"><a href="#sec-math.radians">#</a></span></span></h1>
+
+		<p> When the <code>radians</code> function is called, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>If no arguments are passed, return
+					<emu-val>NaN</emu-val>;</li>
+				<li>If <var>degrees</var> is one of
+					<emu-val>NaN</emu-val>,
+					<emu-val>+∞</emu-val>,
+					<emu-val>-∞</emu-val>, return <var>degrees</var>.</li>
+				<li>Let <var>radians</var> be (<var>degrees</var> × (π ÷ 180)).</li>
+				<li>Return <var>radians</var>.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+
+	<emu-clause id="sec-math.degrees">
+
+		<h1><span class="secnum">6</span>Math.degrees ( <var>radians</var> )<span class="utils"><span class="anchor"><a href="#sec-math.degrees">#</a></span></span></h1>
+
+		<p> When the <code>degrees</code> function is called, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>If no arguments are passed, return
+					<emu-val>NaN</emu-val>;</li>
+				<li>If <var>radians</var> is one of
+					<emu-val>NaN</emu-val>,
+					<emu-val>+∞</emu-val>,
+					<emu-val>-∞</emu-val>, return <var>degrees</var>.</li>
+				<li>Let <var>degrees</var> be (<var>radians</var> × (180 ÷ π)).</li>
+				<li>Return <var>degrees</var>.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+
+	<emu-clause id="sec-number.rad_to_deg">
+		<h1><span class="secnum">7</span>Number.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-number.rad_to_deg">#</a></span></span></h1>
+		<p>The value of Number.RAD_TO_DEG is (180 ÷ π), which is approximately 57.29577951308232.</p>
+		<p>This property has the attributes { [[Writable]]:
+			<emu-val>false</emu-val>, [[Enumerable]]:
+			<emu-val>false</emu-val>, [[Configurable]]:
+			<emu-val>false</emu-val> }.</p>
+	</emu-clause>
+
+	<emu-clause id="sec-number.deg_to_rad">
+		<h1><span class="secnum">8</span>Number.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-number.deg_to_rad">#</a></span></span></h1>
+		<p>The value of Number.DEG_TO_RAD is (π ÷ 180), which is approximately 0.017453292519943295.</p>
+		<p>This property has the attributes { [[Writable]]:
+			<emu-val>false</emu-val>, [[Enumerable]]:
+			<emu-val>false</emu-val>, [[Configurable]]:
+			<emu-val>false</emu-val> }.</p>
+	</emu-clause>
+</body>
