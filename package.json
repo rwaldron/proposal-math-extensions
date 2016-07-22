@@ -5,8 +5,8 @@
 	"main": "reference-implementation/index.js",
 	"scripts": {
 		"clean": "rm -rf out",
-		"build": "npm run clean && mkdir -p out && ecmarkup spec.html --js=out/spec.js --css=out/spec.css | js-beautify -f - --type=html -t > out/index.html",
-		"test": "test262-harness --prelude=reference-implementation/index.js --consoleCommand=\"node --harmony\" --runner=console test/built-ins/Math/**/*.js"
+		"build": "npm run clean && mkdir -p out && ecmarkup src/spec.html --js=out/spec.js --css=out/spec.css | js-beautify -f - --type=html -t > out/index.html",
+		"test": "test262-harness --prelude=reference-implementation/index.js --consoleCommand='node --harmony' --runner=console test/built-ins/Math/**/*.js"
 	},
 	"repository": {
 		"type": "git",

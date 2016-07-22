@@ -135,12 +135,80 @@ contributors: Rick Waldron
 
 <emu-clause id="sec-math.rad_to_deg">
   <h1>Math.RAD_TO_DEG</h1>
-  <p>The value of `Math.RAD_TO_DEG` is (180 &divide; &pi;), which is approximately 57.29577951308232.</p>
+
+  <p>The Number value of `Math.RAD_TO_DEG` is approximately 57.29577951308232.</p>
+
+  <table class="fraction">
+    <tr>
+      <td nowrap="nowrap" class="dividend">
+        180
+      </td>
+      <td rowspan="2" nowrap="nowrap" class="quotient">
+        = <i>`57.29577951308232`</i>
+      </td>
+    </tr>
+    <tr>
+      <td class="vinculum divisor">
+        &pi;
+      </td>
+    </tr>
+  </table>
+
   <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
 </emu-clause>
 
 <emu-clause id="sec-math.deg_to_rad">
   <h1>Math.DEG_TO_RAD</h1>
-  <p>The value of `Math.DEG_TO_RAD` is (&pi; &divide; 180), which is approximately 0.017453292519943295.</p>
+  <p>The Number value of `Math.DEG_TO_RAD` is approximately 0.0174532925199432.</p>
+
+  <table class="fraction">
+    <tr>
+      <td nowrap="nowrap" class="dividend">
+        &pi;
+      </td>
+      <td rowspan="2" nowrap="nowrap" class="quotient">
+        = <i>`0.0174532925199432`</i>
+      </td>
+    </tr>
+    <tr>
+      <td class="vinculum divisor">
+        180
+      </td>
+    </tr>
+  </table>
+
   <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
 </emu-clause>
+
+
+<style>
+  td.vinculum {
+    border-top: solid 1px black;
+  }
+
+  td.quotient {
+    padding-left: 0.25em;
+  }
+
+  table.fraction {
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+    margin-left: 1.5em;
+    line-height: 2em;
+  }
+
+  @media (min-width: 45em) {
+    table.fraction {
+      font-size: 18px;
+      text-align: center;
+      vertical-align: middle;
+      margin-top: 0.5em;
+      margin-bottom:0.5em;
+      margin-left: 1.5em;
+      line-height: 2em;
+    }
+  }
+</style>
