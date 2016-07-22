@@ -113,7 +113,7 @@ contributors: Rick Waldron
 
   <emu-alg>
     1. If _degrees_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
-    1. Let _radians_ be (_degrees_ &times; `Math.RAD_TO_DEG`).
+    1. Let _radians_ be (_degrees_ &times; `Math.DEG_TO_RAD`).
     1. Return _radians_.
   </emu-alg>
 </emu-clause>
@@ -127,7 +127,7 @@ contributors: Rick Waldron
 
   <emu-alg>
     1. If _radians_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
-    1. Let _degrees_ be (_radians_ &times; `Math.DEG_TO_RAD`).
+    1. Let _degrees_ be (_radians_ &times; `Math.RAD_TO_DEG`).
     1. Return _degrees_.
   </emu-alg>
 </emu-clause>
@@ -144,7 +144,7 @@ contributors: Rick Waldron
         180
       </td>
       <td rowspan="2" nowrap="nowrap" class="quotient">
-        = <i>`57.29577951308232`</i>
+        = 57.29577951308232
       </td>
     </tr>
     <tr>
@@ -167,7 +167,7 @@ contributors: Rick Waldron
         &pi;
       </td>
       <td rowspan="2" nowrap="nowrap" class="quotient">
-        = <i>`0.0174532925199432`</i>
+        = 0.0174532925199432
       </td>
     </tr>
     <tr>
