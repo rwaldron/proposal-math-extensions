@@ -110,7 +110,7 @@
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage -1 Draft / July 21, 2016</h1>
+	<h1 class="version">Stage -1 Draft / July 22, 2016</h1>
 	<h1 class="title">Math Extensions</h1>
 
 
@@ -284,7 +284,29 @@
 
 	<emu-clause id="sec-math.rad_to_deg">
 		<h1><span class="secnum">7</span>Math.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
-		<p>The value of <code>Math.RAD_TO_DEG</code> is (180 ÷ π), which is approximately 57.29577951308232.</p>
+
+		<p>The Number value of <code>Math.RAD_TO_DEG</code> is approximately 57.29577951308232.</p>
+
+		<table class="fraction">
+			<tbody>
+				<tr>
+					<td nowrap="nowrap" class="dividend">
+						180
+
+					</td>
+					<td rowspan="2" nowrap="nowrap" class="quotient">
+						= <i><code>57.29577951308232</code></i>
+					</td>
+				</tr>
+				<tr>
+					<td class="vinculum divisor">
+						π
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
 		<p>This property has the attributes { [[Writable]]:
 			<emu-val>false</emu-val>, [[Enumerable]]:
 			<emu-val>false</emu-val>, [[Configurable]]:
@@ -293,10 +315,64 @@
 
 	<emu-clause id="sec-math.deg_to_rad">
 		<h1><span class="secnum">8</span>Math.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
-		<p>The value of <code>Math.DEG_TO_RAD</code> is (π ÷ 180), which is approximately 0.017453292519943295.</p>
+		<p>The Number value of <code>Math.DEG_TO_RAD</code> is approximately 0.0174532925199432.</p>
+
+		<table class="fraction">
+			<tbody>
+				<tr>
+					<td nowrap="nowrap" class="dividend">
+						π
+
+					</td>
+					<td rowspan="2" nowrap="nowrap" class="quotient">
+						= <i><code>0.0174532925199432</code></i>
+					</td>
+				</tr>
+				<tr>
+					<td class="vinculum divisor">
+						180
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
 		<p>This property has the attributes { [[Writable]]:
 			<emu-val>false</emu-val>, [[Enumerable]]:
 			<emu-val>false</emu-val>, [[Configurable]]:
 			<emu-val>false</emu-val> }.</p>
 	</emu-clause>
+
+
+	<style>
+		td.vinculum {
+			border-top: solid 1px black;
+		}
+		
+		td.quotient {
+			padding-left: 0.25em;
+		}
+		
+		table.fraction {
+			font-size: 2em;
+			text-align: center;
+			vertical-align: middle;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			margin-left: 1.5em;
+			line-height: 2em;
+		}
+		
+		@media (min-width: 45em) {
+			table.fraction {
+				font-size: 18px;
+				text-align: center;
+				vertical-align: middle;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				margin-left: 1.5em;
+				line-height: 2em;
+			}
+		}
+	</style>
 </body>
