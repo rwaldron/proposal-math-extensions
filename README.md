@@ -22,11 +22,14 @@ These functions exist in many, many JS libraries either hand rolled or via  [man
 
 Java
 - https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+
 Python
 - https://docs.python.org/2/library/math.html#angular-conversion
 - https://docs.python.org/3/library/math.html#angular-conversion
+
 Racket
 - https://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28lib._racket%2Fmath..rkt%29._degrees-~3eradians%29%29
+
 Rust
 - https://doc.rust-lang.org/std/primitive.f32.html
 - https://doc.rust-lang.org/std/primitive.f64.html
