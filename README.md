@@ -11,7 +11,7 @@ Rick Waldron
 
 ## Status
 
-This proposal is currently in stage -1 of [the TC39 process](https://github.com/tc39/ecma262/).
+This proposal is currently stage 0 of [the TC39 process](https://github.com/tc39/ecma262/).
 
 
 ## Motivation
