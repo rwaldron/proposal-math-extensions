@@ -1,7 +1,8 @@
 # `Math` Extensions Proposal
 
 
-[Polyfill](https://www.npmjs.com/package/ecma-proposal-math-extensions)
+- [Polyfill](https://www.npmjs.com/package/ecma-proposal-math-extensions)
+- [Spec](https://rwaldron.github.io/proposal-math-extensions)
 
 
 ## Champion
@@ -11,7 +12,7 @@ Rick Waldron
 
 ## Status
 
-This proposal is currently stage 0 of [the TC39 process](https://github.com/tc39/ecma262/).
+This proposal is currently stage 1 of [the TC39 process](https://github.com/tc39/ecma262/).
 
 
 ## Motivation
