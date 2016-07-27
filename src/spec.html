@@ -71,37 +71,17 @@ contributors: Rick Waldron
 </emu-clause>
 
 
-<emu-clause id="sec-math.map">
-  <h1>Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )</h1>
+<emu-clause id="sec-math.scale">
+  <h1>Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )</h1>
 
-  <p>When the `map` function is called, the following steps are taken:</p>
-
-  <emu-alg>
-    1. If any argument is *NaN*, return *NaN*.
-    1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
-    1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
-    1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
-    1. Let _quotient_ be (_dividend_ &divide; _divisor_).
-    1. Return _quotient_.
-  </emu-alg>
-
-</emu-clause>
-
-<emu-clause id="sec-math.fmap">
-  <h1>Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )</h1>
-
-  <p> When the `fmap` function is called, the following steps are taken:</p>
+  <p>When the `scale` function is called, the following steps are taken:</p>
 
   <emu-alg>
     1. If any argument is *NaN*, return *NaN*.
     1. If _x_ is one of *+&infin;*, *-&infin;*, return _x_.
-    1. Let _dividend_ be ((_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_)).
-    1. Let _divisor_ be ((_inHigh_ &minus; _inLow_) &plus; _outLow_).
-    1. Let _quotient_ be (_dividend_ &divide; _divisor_).
-    1. Let _x32_ be the result of converting _quotient_ to a value in IEEE 754-2008 binary32 format using roundTiesToEven.
-    1. Let _x64_ be the result of converting _x32_ to a value in IEEE 754-2008 binary64 format.
-    1. Return the ECMAScript Number value corresponding to _x64_.
+    1. Return (_x_ &minus; _inLow_) &times; (_outHigh_ &minus; _outLow_) &divide; (_inHigh_ &minus; _inLow_) &plus; _outLow_.
   </emu-alg>
+
 </emu-clause>
 
 <emu-clause id="sec-math.radians">
