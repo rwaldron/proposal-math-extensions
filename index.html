@@ -27,28 +27,19 @@
 			"key": "Math.constrain ( _x_, _lower_, _upper_ )"
 		}, {
 			"type": "clause",
-			"id": "sec-math.map",
+			"id": "sec-math.scale",
 			"aoid": null,
-			"title": "Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )",
+			"title": "Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )",
 			"number": "3",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"
-		}, {
-			"type": "clause",
-			"id": "sec-math.fmap",
-			"aoid": null,
-			"title": "Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )",
-			"number": "4",
-			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
-			"location": "",
-			"key": "Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"
+			"key": "Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"
 		}, {
 			"type": "clause",
 			"id": "sec-math.radians",
 			"aoid": null,
 			"title": "Math.radians ( _degrees_ )",
-			"number": "5",
+			"number": "4",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
 			"key": "Math.radians ( _degrees_ )"
@@ -57,7 +48,7 @@
 			"id": "sec-math.degrees",
 			"aoid": null,
 			"title": "Math.degrees ( _radians_ )",
-			"number": "6",
+			"number": "5",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
 			"key": "Math.degrees ( _radians_ )"
@@ -66,7 +57,7 @@
 			"id": "sec-math.rad_to_deg",
 			"aoid": null,
 			"title": "Math.RAD_TO_DEG",
-			"number": "7",
+			"number": "6",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
 			"key": "Math.RAD_TO_DEG"
@@ -75,7 +66,7 @@
 			"id": "sec-math.deg_to_rad",
 			"aoid": null,
 			"title": "Math.DEG_TO_RAD",
-			"number": "8",
+			"number": "7",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
 			"key": "Math.DEG_TO_RAD"
@@ -101,12 +92,11 @@
 			<ol class="toc">
 				<li><span class="item-toggle-none"></span><a href="#sec-well-known-intrinsic-objects" title="Well-Known Intrinsic Objects"><span class="secnum">1</span> Well-Known Intrinsic Objects</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.constrain" title="Math.constrain ( _x_, _lower_, _upper_ )"><span class="secnum">2</span> Math.constrain ( <var>x</var>, <var>lower</var>, <var>upper</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.map" title="Math.map ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">3</span> Math.map ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.fmap" title="Math.fmap ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">4</span> Math.fmap ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">5</span> Math.radians ( <var>degrees</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">6</span> Math.degrees ( <var>radians</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.rad_to_deg" title="Math.RAD_TO_DEG"><span class="secnum">7</span> Math.RAD_TO_DEG</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.deg_to_rad" title="Math.DEG_TO_RAD"><span class="secnum">8</span> Math.DEG_TO_RAD</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.scale" title="Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">3</span> Math.scale ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">4</span> Math.radians ( <var>degrees</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">5</span> Math.degrees ( <var>radians</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.rad_to_deg" title="Math.RAD_TO_DEG"><span class="secnum">6</span> Math.RAD_TO_DEG</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.deg_to_rad" title="Math.DEG_TO_RAD"><span class="secnum">7</span> Math.DEG_TO_RAD</a></li>
 			</ol>
 		</div>
 	</div>
@@ -192,33 +182,10 @@
 	</emu-clause>
 
 
-	<emu-clause id="sec-math.map">
-		<h1><span class="secnum">3</span>Math.map ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )<span class="utils"><span class="anchor"><a href="#sec-math.map">#</a></span></span></h1>
+	<emu-clause id="sec-math.scale">
+		<h1><span class="secnum">3</span>Math.scale ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )<span class="utils"><span class="anchor"><a href="#sec-math.scale">#</a></span></span></h1>
 
-		<p>When the <code>map</code> function is called, the following steps are taken:</p>
-
-		<emu-alg>
-			<ol>
-				<li>If any argument is
-					<emu-val>NaN</emu-val>, return
-					<emu-val>NaN</emu-val>.</li>
-				<li>If <var>x</var> is one of
-					<emu-val>+∞</emu-val>,
-					<emu-val>-∞</emu-val>, return <var>x</var>.</li>
-				<li>Let <var>dividend</var> be ((<var>x</var> − <var>inLow</var>) × (<var>outHigh</var> − <var>outLow</var>)).</li>
-				<li>Let <var>divisor</var> be ((<var>inHigh</var> − <var>inLow</var>) + <var>outLow</var>).</li>
-				<li>Let <var>quotient</var> be (<var>dividend</var> ÷ <var>divisor</var>).</li>
-				<li>Return <var>quotient</var>.
-				</li>
-			</ol>
-		</emu-alg>
-
-	</emu-clause>
-
-	<emu-clause id="sec-math.fmap">
-		<h1><span class="secnum">4</span>Math.fmap ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )<span class="utils"><span class="anchor"><a href="#sec-math.fmap">#</a></span></span></h1>
-
-		<p> When the <code>fmap</code> function is called, the following steps are taken:</p>
+		<p>When the <code>scale</code> function is called, the following steps are taken:</p>
 
 		<emu-alg>
 			<ol>
@@ -228,20 +195,16 @@
 				<li>If <var>x</var> is one of
 					<emu-val>+∞</emu-val>,
 					<emu-val>-∞</emu-val>, return <var>x</var>.</li>
-				<li>Let <var>dividend</var> be ((<var>x</var> − <var>inLow</var>) × (<var>outHigh</var> − <var>outLow</var>)).</li>
-				<li>Let <var>divisor</var> be ((<var>inHigh</var> − <var>inLow</var>) + <var>outLow</var>).</li>
-				<li>Let <var>quotient</var> be (<var>dividend</var> ÷ <var>divisor</var>).</li>
-				<li>Let <var>x32</var> be the result of converting <var>quotient</var> to a value in IEEE 754-2008 binary32 format using roundTiesToEven.</li>
-				<li>Let <var>x64</var> be the result of converting <var>x32</var> to a value in IEEE 754-2008 binary64 format.</li>
-				<li>Return the ECMAScript Number value corresponding to <var>x64</var>.
+				<li>Return (<var>x</var> − <var>inLow</var>) × (<var>outHigh</var> − <var>outLow</var>) ÷ (<var>inHigh</var> − <var>inLow</var>) + <var>outLow</var>.
 				</li>
 			</ol>
 		</emu-alg>
+
 	</emu-clause>
 
 	<emu-clause id="sec-math.radians">
 
-		<h1><span class="secnum">5</span>Math.radians ( <var>degrees</var> )<span class="utils"><span class="anchor"><a href="#sec-math.radians">#</a></span></span></h1>
+		<h1><span class="secnum">4</span>Math.radians ( <var>degrees</var> )<span class="utils"><span class="anchor"><a href="#sec-math.radians">#</a></span></span></h1>
 
 		<p> When the <code>radians</code> function is called, the following steps are taken:</p>
 
@@ -261,7 +224,7 @@
 
 	<emu-clause id="sec-math.degrees">
 
-		<h1><span class="secnum">6</span>Math.degrees ( <var>radians</var> )<span class="utils"><span class="anchor"><a href="#sec-math.degrees">#</a></span></span></h1>
+		<h1><span class="secnum">5</span>Math.degrees ( <var>radians</var> )<span class="utils"><span class="anchor"><a href="#sec-math.degrees">#</a></span></span></h1>
 
 		<p> When the <code>degrees</code> function is called, the following steps are taken:</p>
 
@@ -280,7 +243,7 @@
 
 
 	<emu-clause id="sec-math.rad_to_deg">
-		<h1><span class="secnum">7</span>Math.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
+		<h1><span class="secnum">6</span>Math.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
 
 		<p>The Number value of <code>Math.RAD_TO_DEG</code> is approximately 57.29577951308232.</p>
 
@@ -312,7 +275,7 @@
 	</emu-clause>
 
 	<emu-clause id="sec-math.deg_to_rad">
-		<h1><span class="secnum">8</span>Math.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
+		<h1><span class="secnum">7</span>Math.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
 		<p>The Number value of <code>Math.DEG_TO_RAD</code> is approximately 0.0174532925199432.</p>
 
 		<table class="fraction">
