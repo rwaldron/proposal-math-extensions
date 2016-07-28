@@ -1,17 +1,25 @@
 "use strict";
 
 {
-  const defineMath = (name, handler) => {
+  const defineMath = (name, assignment) => {
+    var configurable = typeof assignment === "function" ? true : false;
+    var writable = typeof assignment === "function" ? true : false;
+    var enumerable = typeof assignment === "function" ? true : false;
+
     Object.defineProperty(Math, name, {
-      configurable: true,
-      writable: true,
-      value: handler
+      configurable: configurable,
+      enumerable: enumerable,
+      writable: writable,
+      value: assignment
     });
   };
 
+  defineMath("DEG_PER_RAD", Math.PI / 180);
+  defineMath("RAD_PER_DEG", 180 / Math.PI);
+
   const f32A = new Float32Array(1);
 
-  defineMath("map", function map(x, inLow, inHigh, outLow, outHigh) {
+  defineMath("scale", function scale(x, inLow, inHigh, outLow, outHigh) {
     if (arguments.length === 0) {
       return NaN;
     }
@@ -33,8 +41,8 @@
       (inHigh - inLow) + outLow;
   });
 
-  defineMath("fmap", function fmap(x, inLow, inHigh, outLow, outHigh) {
-    f32A[0] = Math.map(x, inLow, inHigh, outLow, outHigh);
+  defineMath("fscale", function fscale(x, inLow, inHigh, outLow, outHigh) {
+    f32A[0] = Math.scale(x, inLow, inHigh, outLow, outHigh);
     return f32A[0];
   });
 
@@ -43,19 +51,10 @@
   });
 
   defineMath("radians", function radians(degrees) {
-    return degrees * Math.PI / 180;
+    return degrees * Math.DEG_PER_RAD;
   });
 
   defineMath("degrees", function degrees(radians) {
-    return Math.min(upper, Math.max(lower, value));
-  });
-
-  Object.defineProperties(Number, {
-    DEG_TO_RAD: {
-      value: Math.PI / 180,
-    },
-    RAD_TO_DEG: {
-      value: 180 / Math.PI,
-    },
+    return radians * Math.RAD_PER_DEG;
   });
 }
