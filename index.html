@@ -18,13 +18,13 @@
 			"key": "Well-Known Intrinsic Objects"
 		}, {
 			"type": "clause",
-			"id": "sec-math.constrain",
+			"id": "sec-math.clamp",
 			"aoid": null,
-			"title": "Math.constrain ( _x_, _lower_, _upper_ )",
+			"title": "Math.clamp ( _x_, _lower_, _upper_ )",
 			"number": "2",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Math.constrain ( _x_, _lower_, _upper_ )"
+			"key": "Math.clamp ( _x_, _lower_, _upper_ )"
 		}, {
 			"type": "clause",
 			"id": "sec-math.scale",
@@ -91,7 +91,7 @@
 		<div id="menu-toc">
 			<ol class="toc">
 				<li><span class="item-toggle-none"></span><a href="#sec-well-known-intrinsic-objects" title="Well-Known Intrinsic Objects"><span class="secnum">1</span> Well-Known Intrinsic Objects</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.constrain" title="Math.constrain ( _x_, _lower_, _upper_ )"><span class="secnum">2</span> Math.constrain ( <var>x</var>, <var>lower</var>, <var>upper</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.clamp" title="Math.clamp ( _x_, _lower_, _upper_ )"><span class="secnum">2</span> Math.clamp ( <var>x</var>, <var>lower</var>, <var>upper</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.scale" title="Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">3</span> Math.scale ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">4</span> Math.radians ( <var>degrees</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">5</span> Math.degrees ( <var>radians</var> )</a></li>
@@ -163,10 +163,10 @@
 		</emu-table>
 	</emu-clause>
 
-	<emu-clause id="sec-math.constrain">
-		<h1><span class="secnum">2</span>Math.constrain ( <var>x</var>, <var>lower</var>, <var>upper</var> )<span class="utils"><span class="anchor"><a href="#sec-math.constrain">#</a></span></span></h1>
+	<emu-clause id="sec-math.clamp">
+		<h1><span class="secnum">2</span>Math.clamp ( <var>x</var>, <var>lower</var>, <var>upper</var> )<span class="utils"><span class="anchor"><a href="#sec-math.clamp">#</a></span></span></h1>
 
-		<p> When the <code>constrain</code> function is called, the following steps are taken:</p>
+		<p> When the <code>clamp</code> function is called, the following steps are taken:</p>
 
 		<emu-alg>
 			<ol>
