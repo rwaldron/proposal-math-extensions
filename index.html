@@ -56,20 +56,20 @@
 			"type": "clause",
 			"id": "sec-math.rad_to_deg",
 			"aoid": null,
-			"title": "Math.RAD_TO_DEG",
+			"title": "Math.RAD_PER_DEG",
 			"number": "6",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Math.RAD_TO_DEG"
+			"key": "Math.RAD_PER_DEG"
 		}, {
 			"type": "clause",
 			"id": "sec-math.deg_to_rad",
 			"aoid": null,
-			"title": "Math.DEG_TO_RAD",
+			"title": "Math.DEG_PER_RAD",
 			"number": "7",
 			"namespace": "https://github.com/rwaldron/proposal-math-extensions",
 			"location": "",
-			"key": "Math.DEG_TO_RAD"
+			"key": "Math.DEG_PER_RAD"
 		}, {
 			"type": "table",
 			"id": "table-1",
@@ -95,12 +95,12 @@
 				<li><span class="item-toggle-none"></span><a href="#sec-math.scale" title="Math.scale ( _x_, _inLow_, _inHigh_, _outLow_, _outHigh_ )"><span class="secnum">3</span> Math.scale ( <var>x</var>, <var>inLow</var>, <var>inHigh</var>, <var>outLow</var>, <var>outHigh</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.radians" title="Math.radians ( _degrees_ )"><span class="secnum">4</span> Math.radians ( <var>degrees</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-math.degrees" title="Math.degrees ( _radians_ )"><span class="secnum">5</span> Math.degrees ( <var>radians</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.rad_to_deg" title="Math.RAD_TO_DEG"><span class="secnum">6</span> Math.RAD_TO_DEG</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-math.deg_to_rad" title="Math.DEG_TO_RAD"><span class="secnum">7</span> Math.DEG_TO_RAD</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.rad_to_deg" title="Math.RAD_PER_DEG"><span class="secnum">6</span> Math.RAD_PER_DEG</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-math.deg_to_rad" title="Math.DEG_PER_RAD"><span class="secnum">7</span> Math.DEG_PER_RAD</a></li>
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage 1 Draft / July 27, 2016</h1>
+	<h1 class="version">Stage 1 Draft / July 28, 2016</h1>
 	<h1 class="title">Math Extensions</h1>
 
 
@@ -214,7 +214,7 @@
 					<emu-val>NaN</emu-val>,
 					<emu-val>+∞</emu-val>,
 					<emu-val>-∞</emu-val>, return <var>degrees</var>.</li>
-				<li>Let <var>radians</var> be (<var>degrees</var> × <code>Math.DEG_TO_RAD</code>).</li>
+				<li>Let <var>radians</var> be (<var>degrees</var> × <code>Math.DEG_PER_RAD</code>).</li>
 				<li>Return <var>radians</var>.
 				</li>
 			</ol>
@@ -234,7 +234,7 @@
 					<emu-val>NaN</emu-val>,
 					<emu-val>+∞</emu-val>,
 					<emu-val>-∞</emu-val>, return <var>radians</var>.</li>
-				<li>Let <var>degrees</var> be (<var>radians</var> × <code>Math.RAD_TO_DEG</code>).</li>
+				<li>Let <var>degrees</var> be (<var>radians</var> × <code>Math.RAD_PER_DEG</code>).</li>
 				<li>Return <var>degrees</var>.
 				</li>
 			</ol>
@@ -243,9 +243,9 @@
 
 
 	<emu-clause id="sec-math.rad_to_deg">
-		<h1><span class="secnum">6</span>Math.RAD_TO_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
+		<h1><span class="secnum">6</span>Math.RAD_PER_DEG<span class="utils"><span class="anchor"><a href="#sec-math.rad_to_deg">#</a></span></span></h1>
 
-		<p>The Number value of <code>Math.RAD_TO_DEG</code> is approximately 57.29577951308232.</p>
+		<p>The Number value of <code>Math.RAD_PER_DEG</code> is approximately 57.29577951308232.</p>
 
 		<table class="fraction">
 			<tbody>
@@ -275,8 +275,8 @@
 	</emu-clause>
 
 	<emu-clause id="sec-math.deg_to_rad">
-		<h1><span class="secnum">7</span>Math.DEG_TO_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
-		<p>The Number value of <code>Math.DEG_TO_RAD</code> is approximately 0.0174532925199432.</p>
+		<h1><span class="secnum">7</span>Math.DEG_PER_RAD<span class="utils"><span class="anchor"><a href="#sec-math.deg_to_rad">#</a></span></span></h1>
+		<p>The Number value of <code>Math.DEG_PER_RAD</code> is approximately 0.0174532925199432.</p>
 
 		<table class="fraction">
 			<tbody>
