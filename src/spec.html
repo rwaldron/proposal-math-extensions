@@ -92,7 +92,7 @@ contributors: Rick Waldron
 
   <emu-alg>
     1. If _degrees_ is one of *NaN*, *+&infin;*, *-&infin;*, return _degrees_.
-    1. Let _radians_ be (_degrees_ &times; `Math.DEG_TO_RAD`).
+    1. Let _radians_ be (_degrees_ &times; `Math.DEG_PER_RAD`).
     1. Return _radians_.
   </emu-alg>
 </emu-clause>
@@ -106,16 +106,16 @@ contributors: Rick Waldron
 
   <emu-alg>
     1. If _radians_ is one of *NaN*, *+&infin;*, *-&infin;*, return _radians_.
-    1. Let _degrees_ be (_radians_ &times; `Math.RAD_TO_DEG`).
+    1. Let _degrees_ be (_radians_ &times; `Math.RAD_PER_DEG`).
     1. Return _degrees_.
   </emu-alg>
 </emu-clause>
 
 
 <emu-clause id="sec-math.rad_to_deg">
-  <h1>Math.RAD_TO_DEG</h1>
+  <h1>Math.RAD_PER_DEG</h1>
 
-  <p>The Number value of `Math.RAD_TO_DEG` is approximately 57.29577951308232.</p>
+  <p>The Number value of `Math.RAD_PER_DEG` is approximately 57.29577951308232.</p>
 
   <table class="fraction">
     <tr>
@@ -137,8 +137,8 @@ contributors: Rick Waldron
 </emu-clause>
 
 <emu-clause id="sec-math.deg_to_rad">
-  <h1>Math.DEG_TO_RAD</h1>
-  <p>The Number value of `Math.DEG_TO_RAD` is approximately 0.0174532925199432.</p>
+  <h1>Math.DEG_PER_RAD</h1>
+  <p>The Number value of `Math.DEG_PER_RAD` is approximately 0.0174532925199432.</p>
 
   <table class="fraction">
     <tr>
