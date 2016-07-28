@@ -46,7 +46,7 @@
     return f32A[0];
   });
 
-  defineMath("constrain", function constrain(x, lower, upper) {
+  defineMath("clamp", function clamp(x, lower, upper) {
     return Math.min(upper, Math.max(lower, x));
   });
 
