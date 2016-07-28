@@ -1,6 +1,6 @@
 {
   "name": "ecma-proposal-math-extensions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tests and a polyfill for the ES2017 Math Extensions Proposal",
   "main": "reference-implementation/index.js",
   "scripts": {
