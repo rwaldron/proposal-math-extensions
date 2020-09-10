@@ -1,7 +1,6 @@
 # `Math` Extensions Proposal
 
 
-- [Polyfill](https://www.npmjs.com/package/ecma-proposal-math-extensions)
 - [Spec](https://rwaldron.github.io/proposal-math-extensions)
 
 
@@ -68,3 +67,8 @@ Rust
     - `Math.constrain` 
     - `Math.clamp`
 
+
+### Polyfills
+
+- [Polyfill](https://www.npmjs.com/package/ecma-proposal-math-extensions).
+- Also, a polyfill is available in the [core-js](https://github.com/zloirock/core-js) library. You can find it in the [ECMAScript proposals section](https://github.com/zloirock/core-js#math-extensions).
