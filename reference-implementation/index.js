@@ -14,9 +14,16 @@
     });
   };
 
+  defineMath("SQRT2P1", Math.SQRT2 + 1);
+  defineMath("SQRT3", Math.sqrt(3));
+  defineMath("SQRT5", Math.sqrt(5));
+  defineMath("SQRT3_2", Math.SQRT3 / 4);
+  defineMath("SQRT2_3", 4 / Math.SQRT3);
+  defineMath("PHI", (Math.SQRT5 + 1) / 2);
   defineMath("DEG_PER_RAD", Math.PI / 180);
   defineMath("RAD_PER_DEG", 180 / Math.PI);
-
+  defineMath("TAU", 2 * Math.PI);
+  
   const f32A = new Float32Array(1);
 
   defineMath("scale", function scale(x, inLow, inHigh, outLow, outHigh) {
