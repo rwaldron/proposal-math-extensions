@@ -21,7 +21,7 @@ These functions exist in many, many JS libraries either hand rolled or via  [man
 
 
 Java
-- https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+- https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/Math.html
   + `Math`
     + `Math.toDegrees(double angrad)`
     + `Math.toRadians(double angdeg)`
