@@ -3,13 +3,12 @@
 {
   const defineMath = (name, assignment) => {
     const configurable = typeof assignment === "function";
-    const enumerable = configurable;
     const writable = configurable;
 
     Object.defineProperty(Math, name, {
       configurable,
-      enumerable,
       writable,
+      enumerable: false,
       value: assignment
     });
   };
