@@ -2,7 +2,9 @@
 
 {
   const defineMath = (name, assignment) => {
-    const configurable = writable = enumerable = typeof assignment === "function";
+    const configurable = typeof assignment === "function";
+    const enumerable = configurable;
+    const writable = configurable;
 
     Object.defineProperty(Math, name, {
       configurable,
